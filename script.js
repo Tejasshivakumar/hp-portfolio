@@ -224,8 +224,14 @@ function populateAll() {
     twitter:  { type: 'bx', icon: 'bxl-twitter'   },
     leetcode: {
       type: 'svg',
-      icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/>
+             </svg>`,
+    },
+    geeksforgeeks: {
+      type: 'svg',
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+               <path d="M21.45 14.315c-.143.28-.334.532-.565.745a3.69 3.69 0 0 1-1.104.695 4.51 4.51 0 0 1-1.429.25c-1.17 0-2.17-.5-3.046-1.453l-.022-.024-.684.507a5.3 5.3 0 0 1-.707.453 3.7 3.7 0 0 1-1.732.398 3.692 3.692 0 0 1-2.223-.682 4.84 4.84 0 0 1-.707-.65l-.697.507a5.3 5.3 0 0 1-.718.453 3.7 3.7 0 0 1-1.732.398A3.692 3.692 0 0 1 4.08 15.24a3.42 3.42 0 0 1-.565-.748c-.16-.285-.27-.595-.33-.923a4.6 4.6 0 0 1-.067-.78c0-.54.098-1.05.293-1.527a3.7 3.7 0 0 1 .8-1.2 3.562 3.562 0 0 1 1.19-.788 3.72 3.72 0 0 1 1.473-.284c.507 0 .982.089 1.424.266.442.177.834.44 1.178.787l.684-.507a5.3 5.3 0 0 1 .707-.453 3.7 3.7 0 0 1 1.732-.398c.634 0 1.21.136 1.726.408.272.143.522.32.75.53l.69-.507a5.3 5.3 0 0 1 .717-.453 3.7 3.7 0 0 1 1.733-.398c.533 0 1.033.098 1.495.293.463.196.87.476 1.22.84.35.364.622.796.816 1.296.194.5.29 1.044.29 1.633 0 .27-.022.534-.067.794zM12 13.012a.903.903 0 0 0-.9.9.903.903 0 0 0 .9.9h4.342a.903.903 0 0 0 .9-.9.903.903 0 0 0-.9-.9H12z"/>
              </svg>`,
     },
   };
@@ -336,6 +342,29 @@ function populateAll() {
     projectsContainer.appendChild(card);
     observer.observe(card);
   });
+
+  // ─ Achievements ─
+  const achContainer = document.getElementById('achievements-container');
+  if (achContainer && c.achievements) {
+    c.achievements.forEach((ach, i) => {
+      const card = document.createElement('div');
+      card.className = 'achievement-card animate-fade';
+      card.style.transitionDelay = `${i * 0.1}s`;
+      card.innerHTML = `
+        <div class="ach-emoji">${ach.emoji}</div>
+        <div class="ach-body">
+          <div class="ach-meta">
+            <span class="ach-org">${ach.organisation}</span>
+            <span class="ach-year">${ach.year}</span>
+          </div>
+          <h3 class="ach-title">${ach.title}</h3>
+          <p class="ach-desc">${ach.description}</p>
+        </div>
+      `;
+      achContainer.appendChild(card);
+      observer.observe(card);
+    });
+  }
 
   // ─ Footer ─
   const footerName = document.getElementById('footer-name');

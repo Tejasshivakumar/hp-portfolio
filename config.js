@@ -1,7 +1,6 @@
 // ============================================================
-//  HP PORTFOLIO CONFIG  ⚡
-//  Edit this file to update your portfolio content.
-//  All Harry Potter flavour text can be customised here too.
+//  HP PORTFOLIO CONFIG  ⚡  — Tejas Shiva Kumar
+//  Edit this file to update portfolio content.
 // ============================================================
 
 const config = {
@@ -13,119 +12,175 @@ const config = {
   hero: {
     spell:    "✨ Lumos! ✨",
     greeting: "Hello! I'm",
-    name:     "Tejas S Kumar",
-    taglines: [                          // cycles in typewriter
-      "ASP.NET Developer",
-      "MSc Scholar @ DCU",
+    name:     "Tejas Shiva Kumar",
+    taglines: [
+      "Software Engineer",
+      "Backend Developer",
+      "Data Analytics Scholar",
       "Problem Solver",
-      "Code Wizard",
     ],
-    intro: `A passionate developer with 10 months of professional experience in ASP.NET
-and the .NET ecosystem. Currently pursuing a Master's in Computing at Dublin City
-University (DCU), Ireland. I craft robust, scalable web applications and am always
-eager to learn powerful new spells — I mean, technologies!`,
+    intro: `Software Engineer and Data Analytics Master's student at Dublin City University.
+Professional experience in .NET development, SQL, Python, and backend engineering.
+I enjoy building scalable software systems, solving algorithmic problems, and
+crafting data-driven applications.`,
     resume: "./Files/Tejas_Shivakumar_Resume.pdf",
   },
 
   // ── Social Links (set "" to hide) ─────────────────────────
   social: {
-    github:   "https://github.com/Tejasshivakumar",
-    linkedin: "https://www.linkedin.com/in/tejas-s-kumar-51940a24b/",
-    leetcode: "https://leetcode.com/u/tejasshivakumar2001/",
+    github:        "https://github.com/Tejasshivakumar",
+    linkedin:      "https://www.linkedin.com/in/tejas-shiva-kumar-51940a24b",
+    leetcode:      "https://leetcode.com/u/tejasshivakumar2001/",
+    geeksforgeeks: "https://www.geeksforgeeks.org/user/tejasshivactle/",
   },
 
   // ── About Section ─────────────────────────────────────────
   about: {
-    text: `Greetings, fellow wizard! I am Tejas S Kumar — a developer who has honed his craft
-in the art of building digital spells, otherwise known as software. With a strong
-foundation in ASP.NET and the .NET ecosystem, I spent 10 months as a professional
-developer conjuring enterprise-grade web applications. Now I wield my wand at
-Dublin City University, pursuing a Master's in Computing to deepen my magical
-knowledge. I believe the best code is written with curiosity, precision, and a
-touch of magic.`,
+    text: `I am a Software Engineer and Data Analytics Master's student at Dublin City
+University with professional experience in .NET development, SQL, Python, and
+backend development. I enjoy building scalable software systems, solving
+algorithmic problems, and working on data-driven applications. I am particularly
+interested in backend engineering, data analytics, and automation systems.`,
     stats: [
-      { label: "🏰 House",      value: "Gryffindor"         },
-      { label: "🪄 Specialty",  value: "ASP.NET & C#"       },
-      { label: "📚 Studies",    value: "MSc Computing, DCU" },
-      { label: "⚡ Experience", value: "10+ Months"         },
+      { label: "🏰 House",      value: "Gryffindor"              },
+      { label: "🪄 Specialty",  value: "ASP.NET & Backend Dev"   },
+      { label: "📚 Studies",    value: "MSc Data Analytics, DCU" },
+      { label: "⚡ Experience", value: "1+ Year"                 },
     ],
   },
 
-  // ── Chronicles (Experience + Education) ───────────────────
+  // ── Chronicles (Experience + Education, newest first) ─────
   chronicles: [
     {
       type:         "education",
-      role:         "MSc in Computing",
+      role:         "Master's in Data Analytics",
       organization: "Dublin City University (DCU)",
       location:     "Dublin, Ireland",
-      period:       "2024 — Present",
+      period:       "2024 — 2026",
       duration:     "In Progress",
-      description:  `Pursuing a Master's degree in Computing at one of Ireland's leading
+      description:  `Pursuing a Master's degree in Data Analytics at one of Ireland's leading
 technology universities. Engaged in advanced coursework spanning software
-engineering, cloud computing, AI/ML, and research methodologies.`,
-      tags: ["Computing", "Research", "Software Engineering", "DCU", "Ireland"],
+engineering, machine learning, data visualisation, and research methodologies.`,
+      tags: ["Data Analytics", "Machine Learning", "Software Engineering", "DCU", "Ireland"],
     },
     {
       type:         "employment",
-      role:         "ASP.NET Developer",
-      organization: "Your Company Name",   // ← update me
-      location:     "Your Location",       // ← update me
+      role:         "Software Engineer",
+      organization: "AceMicromatic Manufacturing Intelligence Technologies",
+      location:     "India",
       period:       "2023 — 2024",
-      duration:     "10 Months",
-      description:  `Developed and maintained enterprise-level web applications using ASP.NET
-MVC and the .NET Framework. Collaborated with cross-functional teams to design,
-implement and deploy scalable backend solutions. Worked with SQL Server databases,
-RESTful APIs, and followed agile development practices throughout the SDLC.`,
-      tags: ["ASP.NET", "C#", ".NET", "SQL Server", "MVC", "REST APIs", "Agile"],
+      duration:     "1 Year",
+      description:  `Developed and maintained ASP.NET applications using C#, JavaScript, and
+Bootstrap across the full software development lifecycle — from requirement analysis
+to deployment. Built responsive UI components, improved application performance,
+and performed debugging, optimisation, and code reviews. Developed SQL queries and
+stored procedures to enhance database performance, and generated Excel reports
+using SQL Server.`,
+      tags: ["ASP.NET", "C#", "JavaScript", "Bootstrap", "SQL Server", "MVC", ".NET"],
+    },
+    {
+      type:         "education",
+      role:         "Bachelor's in Information Science & Engineering",
+      organization: "S J C Institute of Technology",
+      location:     "India",
+      period:       "2019 — 2023",
+      duration:     "Graduated 2023",
+      description:  `Completed a Bachelor's degree in Information Science and Engineering,
+building a strong foundation in software development, data structures, algorithms,
+databases, and systems programming.`,
+      tags: ["Information Science", "Engineering", "DSA", "Databases", "Software Development"],
     },
   ],
 
   // ── Tech Stack / Spell Book ───────────────────────────────
-  // incantation: a fun HP-flavoured label for each skill
   skills: [
-    { name: "C#",         incantation: "Accio Sharp!",        icon: "bx-code-curly",   link: "#" },
-    { name: "ASP.NET",    incantation: "Wingardium Leviosa!", icon: "bx-server",        link: "#" },
-    { name: "SQL Server", incantation: "Alohomora!",          icon: "bx-data",          link: "#" },
-    { name: "JavaScript", incantation: "Expelliarmus!",       icon: "bxl-javascript",   link: "#" },
-    { name: "Python",     incantation: "Lumos!",              icon: "bxl-python",       link: "#" },
-    { name: "HTML5",      incantation: "Riddikulus!",         icon: "bxl-html5",        link: "#" },
-    { name: "CSS3",       incantation: "Engorgio!",           icon: "bxl-css3",         link: "#" },
-    { name: "Git",        incantation: "Revelio!",            icon: "bxl-git",          link: "#" },
-    { name: "Java",       incantation: "Diffindo!",           icon: "bxl-java",         link: "#" },
+    { name: "C#",          incantation: "Accio Sharp!",        icon: "bx-code-curly",   link: "#" },
+    { name: "ASP.NET",     incantation: "Wingardium Leviosa!", icon: "bx-server",        link: "#" },
+    { name: "Python",      incantation: "Lumos!",              icon: "bxl-python",       link: "#" },
+    { name: "JavaScript",  incantation: "Expelliarmus!",       icon: "bxl-javascript",   link: "#" },
+    { name: "Java",        incantation: "Diffindo!",           icon: "bxl-java",         link: "#" },
+    { name: "SQL Server",  incantation: "Alohomora!",          icon: "bx-data",          link: "#" },
+    { name: "MySQL",       incantation: "Aguamenti!",          icon: "bxs-data",         link: "#" },
+    { name: "HTML5",       incantation: "Riddikulus!",         icon: "bxl-html5",        link: "#" },
+    { name: "CSS3",        incantation: "Engorgio!",           icon: "bxl-css3",         link: "#" },
+    { name: "Bootstrap",   incantation: "Reparo!",             icon: "bxl-bootstrap",    link: "#" },
+    { name: "React",       incantation: "Transfiguration!",    icon: "bxl-react",        link: "#" },
+    { name: "Git",         incantation: "Revelio!",            icon: "bxl-git",          link: "#" },
   ],
 
   // ── Projects (Room of Requirement) ────────────────────────
   projects: [
     {
-      title:       "Insurance Management System",
-      description: "A full-featured enterprise insurance management application built with ASP.NET MVC and SQL Server. Handles policy management, claims, and customer records.",
+      title:       "Smart Education Platform",
+      description: "Interactive platform for real-time student-teacher interaction with a personalised Q&A system, course recommendation engine (Python & MySQL), and admin dashboard for institutions.",
+      gradient:    "linear-gradient(135deg, #0d1a3a 0%, #1a3d6e 100%)",
+      emoji:       "🎓",
+      tags:        ["Python", "MySQL", "Backend", "Automation"],
+      link:        "#",
+      status:      "Completed",
+    },
+    {
+      title:       "Visitor Management System",
+      description: "Full visitor check-in / check-out system with host notifications, dashboard display, email alerts, Excel report generation, data encryption, and visitor image capture.",
       gradient:    "linear-gradient(135deg, #1a0a2e 0%, #3d1a5e 100%)",
       emoji:       "🏛️",
+      tags:        ["ASP.NET", "C#", "SQL Server", "Excel Reports"],
+      link:        "#",
+      status:      "Completed",
+    },
+    {
+      title:       "Insurance Management System",
+      description: "Enterprise insurance management application handling policy management, claims processing, and customer records — built with ASP.NET MVC and SQL Server.",
+      gradient:    "linear-gradient(135deg, #1a1a0a 0%, #4a3d10 100%)",
+      emoji:       "📋",
       tags:        ["ASP.NET", "C#", "SQL Server", "MVC"],
       link:        "#",
       status:      "Awaiting Deployment",
     },
     {
-      title:       "Coming Soon",
-      description: "The Room of Requirement is still being furnished. Something exciting is being conjured — stay tuned!",
-      gradient:    "linear-gradient(135deg, #0a1a2e 0%, #1a3d5e 100%)",
-      emoji:       "🔮",
-      tags:        ["TBD"],
+      title:       "Pharmacy Management System",
+      description: "Python-based system managing customer purchases, products and orders with a reward points & discount engine. Handles CSV/file storage and auto-updates customer, product, and order records.",
+      gradient:    "linear-gradient(135deg, #0a1a0a 0%, #1a4a1a 100%)",
+      emoji:       "💊",
+      tags:        ["Python", "CSV", "File Handling", "Automation"],
       link:        "#",
-      status:      "In Progress",
+      status:      "Completed",
+    },
+  ],
+
+  // ── Achievements / Accolades ──────────────────────────────
+  achievements: [
+    {
+      emoji:        "🏆",
+      title:        "Winner — AI Film Making Hackathon",
+      organisation: "Give(a)Go",
+      description:  "Won a competitive AI-focused hackathon, demonstrating creative problem-solving and applied AI skills in a time-constrained environment.",
+      year:         "2024",
     },
     {
-      title:       "Coming Soon",
-      description: "The Room of Requirement is still being furnished. Something exciting is being conjured — stay tuned!",
-      gradient:    "linear-gradient(135deg, #1a1a0a 0%, #3d3d1a 100%)",
-      emoji:       "📜",
-      tags:        ["TBD"],
-      link:        "#",
-      status:      "In Progress",
+      emoji:        "📜",
+      title:        "NPTEL Elite Certificate",
+      organisation: "NPTEL / IIT",
+      description:  "Awarded Elite Certificate in Programming, Data Structures and Algorithms using Python — a nationally recognised credential from India's IIT network.",
+      year:         "2023",
+    },
+    {
+      emoji:        "💻",
+      title:        "Active Competitive Programmer",
+      organisation: "LeetCode & GeeksforGeeks",
+      description:  "Consistently solving algorithmic challenges on LeetCode and GeeksforGeeks, sharpening problem-solving skills across data structures, algorithms, and system design.",
+      year:         "Ongoing",
+    },
+    {
+      emoji:        "🚀",
+      title:        "Full-Stack & Backend Developer",
+      organisation: "Personal & Professional Projects",
+      description:  "Built multiple production-grade applications spanning ASP.NET, Python, SQL Server, and MySQL — from enterprise tools to automation systems.",
+      year:         "2021 — Present",
     },
   ],
 
   // ── Footer ────────────────────────────────────────────────
-  footer:      "Designed by Tejas S Kumar",
+  footer:      "Designed by Tejas Shiva Kumar",
   footerMagic: "✨ Mischief Managed ✨",
 };
