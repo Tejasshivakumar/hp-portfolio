@@ -148,15 +148,30 @@ databases, and systems programming.`,
     },
   ],
 
-  // ── Achievements / Accolades ──────────────────────────────
-  achievements: [
+  // ── Hackathons ────────────────────────────────────────────
+  // result: "winner" | "runner-up" | "finalist" | "participant"
+  hackathons: [
     {
-      emoji:        "🏆",
-      title:        "Winner — AI Film Making Hackathon",
-      organisation: "Give(a)Go",
-      description:  "Won a competitive AI-focused hackathon, demonstrating creative problem-solving and applied AI skills in a time-constrained environment.",
-      year:         "2024",
+      result:      "winner",
+      badge:       "🏆",
+      title:       "AI Film Making Hackathon",
+      organiser:   "Give(a)Go",
+      description: "Won a competitive AI-focused hackathon leveraging AI tools to create and produce a short film. Demonstrated creative problem-solving, rapid prototyping, and applied AI skills under time pressure.",
+      year:        "2024",
     },
+    // ── Add more hackathons below ──────────────────────────
+    // {
+    //   result:      "participant",   // winner / runner-up / finalist / participant
+    //   badge:       "🎯",
+    //   title:       "Hackathon Name",
+    //   organiser:   "Organiser / University / Platform",
+    //   description: "Brief description of what you built or achieved.",
+    //   year:        "Year",
+    // },
+  ],
+
+  // ── Certifications & Other Achievements ───────────────────
+  achievements: [
     {
       emoji:        "📜",
       title:        "NPTEL Elite Certificate",

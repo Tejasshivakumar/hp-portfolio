@@ -156,11 +156,17 @@ window.addEventListener('scroll', () => {
 // ── Scroll-triggered animations (Intersection Observer) ───────
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    // Class-based animation (CSS handles the transition)
+    el.classList.add('visible');
+    // Inline-style animation (hackathon/achievement cards)
+    if (el.style.opacity === '0') {
+      el.style.opacity = '1';
+      el.style.transform = 'translateY(0)';
     }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.1 });
 
 document.querySelectorAll(
   '.animate-fade, .animate-slide-left, .animate-slide-right, ' +
@@ -343,13 +349,48 @@ function populateAll() {
     observer.observe(card);
   });
 
+  // ─ Hackathons ─
+  const hackathonsContainer = document.getElementById('hackathons-container');
+  if (hackathonsContainer && c.hackathons) {
+    c.hackathons.forEach((hk, i) => {
+      const isWinner = hk.result === 'winner';
+      const card = document.createElement('div');
+      card.className = `hackathon-card hackathon-${hk.result}`;
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(24px)';
+      card.style.transition = `opacity 0.6s ease ${i * 0.12}s, transform 0.6s ease ${i * 0.12}s`;
+
+      const resultLabels = {
+        winner:     '🏆 WINNER',
+        'runner-up':'🥈 RUNNER-UP',
+        finalist:   '🎖️ FINALIST',
+        participant:'🎯 PARTICIPANT',
+      };
+
+      card.innerHTML = `
+        <div class="hk-top">
+          <span class="hk-badge hk-badge--${hk.result}">${resultLabels[hk.result] || hk.result.toUpperCase()}</span>
+          <span class="hk-year">${hk.year}</span>
+        </div>
+        <div class="hk-emoji">${hk.badge}</div>
+        <h3 class="hk-title">${hk.title}</h3>
+        <p class="hk-organiser">${hk.organiser}</p>
+        <p class="hk-desc">${hk.description}</p>
+      `;
+      hackathonsContainer.appendChild(card);
+      observer.observe(card);
+    });
+  }
+
   // ─ Achievements ─
   const achContainer = document.getElementById('achievements-container');
   if (achContainer && c.achievements) {
     c.achievements.forEach((ach, i) => {
       const card = document.createElement('div');
-      card.className = 'achievement-card animate-fade';
-      card.style.transitionDelay = `${i * 0.1}s`;
+      card.className = 'achievement-card';
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(24px)';
+      card.style.transition = `opacity 0.6s ease ${i * 0.1}s, transform 0.6s ease ${i * 0.1}s`;
       card.innerHTML = `
         <div class="ach-emoji">${ach.emoji}</div>
         <div class="ach-body">
