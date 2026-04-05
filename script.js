@@ -219,7 +219,29 @@ function populateAll() {
   document.getElementById('hero-intro').textContent    = c.hero.intro;
 
   const resumeBtn = document.getElementById('resume-btn');
-  if (resumeBtn) resumeBtn.href = c.hero.resume;
+  if (resumeBtn) {
+    resumeBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      fetch(c.hero.resume)
+        .then(res => {
+          if (!res.ok) throw new Error('File not found');
+          return res.blob();
+        })
+        .then(blob => {
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = 'TEJAS_SHIVA_KUMAR_RESUME.pdf';
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+        })
+        .catch(() => {
+          window.open(c.hero.resume, '_blank');
+        });
+    });
+  }
 
   startTypewriter(document.getElementById('hero-tagline'), c.hero.taglines);
 
