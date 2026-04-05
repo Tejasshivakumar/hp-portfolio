@@ -23,7 +23,7 @@ const config = {
 Professional experience in .NET development, SQL, Python, and backend engineering.
 I enjoy building scalable software systems, solving algorithmic problems, and
 crafting data-driven applications.`,
-    resume: "./Files/Tejas_Shivakumar_Resume.pdf",
+    resume: "./RESUME/TEJAS_SHIVA_KUMAR_RESUME.pdf",
   },
 
   // ── Social Links (set "" to hide) ─────────────────────────
